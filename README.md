@@ -1,2 +1,3 @@
 # carlosbelardi.github.io
-Young Thug Test Website
+EECS 330 Computer Prototype1
+
