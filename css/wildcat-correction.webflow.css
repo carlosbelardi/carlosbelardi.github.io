@@ -66,7 +66,13 @@ p {
   display: block;
   width: 32%;
   height: 54px;
+<<<<<<< Updated upstream
   padding: 4px 29px;
+=======
+  margin-top: 271px;
+  margin-left: 371px;
+  padding: 14px 0px 4px;
+>>>>>>> Stashed changes
   float: left;
   border-radius: 4px;
   background-color: #c96c47;
@@ -166,8 +172,13 @@ p {
 }
 
 .footer-section {
+<<<<<<< Updated upstream
   padding-top: 38px;
   padding-bottom: 34px;
+=======
+  padding-top: 10px;
+  padding-bottom: 9px;
+>>>>>>> Stashed changes
   background-color: #2f292b;
   box-shadow: 0 -1px 0 0 hsla(0, 0%, 100%, .08), inset 0 1px 1px 0 rgba(0, 0, 0, .24);
   color: #7e7c87;
@@ -257,11 +268,28 @@ p {
 }
 
 .sec {
+<<<<<<< Updated upstream
   padding-bottom: 286px;
+=======
+  margin-bottom: 2px;
+  padding-top: 49px;
+  padding-bottom: 1px;
+>>>>>>> Stashed changes
   background-image: -webkit-linear-gradient(270deg, #4e2a84, #836eaa);
   background-image: linear-gradient(180deg, #4e2a84, #836eaa);
 }
 
+<<<<<<< Updated upstream
+=======
+.sec.login {
+  padding-bottom: 198px;
+}
+
+.sec.first {
+  padding-bottom: 69px;
+}
+
+>>>>>>> Stashed changes
 .navlogo {
   left: -131px;
   margin-top: -8px;
@@ -275,6 +303,13 @@ p {
   padding: 60px 0px 47px 302px;
 }
 
+<<<<<<< Updated upstream
+=======
+.resulttitle.results {
+  padding-left: 130px;
+}
+
+>>>>>>> Stashed changes
 .subhead {
   padding-top: 46px;
   padding-left: 52px;
@@ -299,11 +334,51 @@ p {
 }
 
 .resultbutton {
+<<<<<<< Updated upstream
   display: block;
   margin-left: 0px;
   padding: 21px 56px 25px;
   font-size: 22px;
   text-align: center;
+=======
+  margin-left: 359px;
+}
+
+.logininfo {
+  margin-top: -2px;
+  padding-right: 286px;
+  padding-left: 376px;
+}
+
+.butt {
+  margin-top: 1px;
+  margin-bottom: 33px;
+  padding-top: 9px;
+}
+
+.cent {
+  margin-left: 134px;
+}
+
+.titlelogin {
+  margin-top: -19px;
+  margin-bottom: 73px;
+  padding-top: 0px;
+  padding-left: 435px;
+}
+
+.statpage {
+  margin-top: -20px;
+  margin-bottom: 28px;
+  padding-left: 358px;
+}
+
+.embed {
+  margin-bottom: 39px;
+  padding-right: 0px;
+  padding-bottom: 1px;
+  padding-left: 189px;
+>>>>>>> Stashed changes
 }
 
 html.w-mod-js *[data-ix="display-none-on-load"] {
@@ -357,3 +432,7 @@ html.w-mod-js *[data-ix="display-none-on-load"] {
     text-align: center;
   }
 }
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
