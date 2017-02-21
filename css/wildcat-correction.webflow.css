@@ -114,6 +114,71 @@ p {
   text-shadow: 1px 1px 2px rgba(0, 0, 0, .24), 0 1px 0 rgba(0, 0, 0, .25);
 }
 
+.firstbutton {
+    margin-top:4em;
+    margin-left:47%;
+    display: inline-block;
+  padding: 9px 15px;
+  background-color: #3898EC;
+  color: white;
+  border: 0;
+  line-height: inherit;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 0;
+}
+
+.surveytitle {
+    margin-top:-0.5em;
+  margin-bottom:0em;
+  padding-top:0em;
+  padding-bottom:0.5em;
+  direction: ltr;
+  font-family: Georgia, Times, 'Times New Roman', serif;
+  color: #f8f8f8;
+  font-size: 67px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.surveybutton {
+    background-color: #3898EC;
+    width:15%;
+    margin-top:3em;
+    margin-left:46%;
+    display: inline-block;
+  padding: 9px 15px;
+  color: white;
+  border: 0;
+  line-height: inherit;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 0;
+}
+.statembed {
+    margin-bottom:3em;
+    margin-left:15%;
+    margin-right:20%;
+    width:70%;
+}
+.surveyembed {
+    margin-bottom:0em;
+    margin-left:5%;
+    margin-right:5%;
+    width:100%;
+}
+.statpage {
+  margin-top:10px;
+  margin-bottom: 28px;
+  margin-left: 38%;
+    margin-right:38%;
+  padding-left: 0px;
+    width=10%;
+  font-family: Georgia, Times, 'Times New Roman', serif;
+  font-size: 63px;
+  font-weight: 600;
+}
+
 .field {
   width: 65%;
   height: 54px;
