@@ -707,6 +707,11 @@
   Webflow.define('backgroundVideo', module.exports = function ($) {
 
     function ready () {
+      // Prevent default render while in-app
+      if (Webflow.env()) {
+        return;
+      }
+
       var backgroundVideoNodes = $(document).find('.w-background-video');
       if (backgroundVideoNodes.length === 0) {
         return;
@@ -916,11 +921,27 @@
     var stateOpen = 'w--open';
     var closeEvent = 'w-close' + namespace;
     var ix = IXEvents.triggers;
+    var defaultZIndex = 900; // @dropdown-depth
+    var inPreview = false;
 
     // -----------------------------------
     // Module methods
 
-    api.ready = api.design = api.preview = init;
+    api.ready = init;
+
+    api.design = function() {
+      // Close all when returning from preview
+      if (inPreview) {
+        closeAll();
+      }
+      inPreview = false;
+      init();
+    };
+
+    api.preview = function() {
+      inPreview = true;
+      init();
+    };
 
     // -----------------------------------
     // Private methods
@@ -972,6 +993,10 @@
     }
 
     function configure(data) {
+      // Determine if z-index should be managed
+      var zIndex = Number(data.el.css('z-index'));
+      data.manageZ = zIndex === defaultZIndex || zIndex === defaultZIndex + 1;
+
       data.config = {
         hover: Boolean(data.el.attr('data-hover')) && !touch,
         delay: Number(data.el.attr('data-delay')) || 0
@@ -1010,6 +1035,9 @@
       ix.intro(0, data.el[0]);
       Webflow.redraw.up();
 
+      // Increase z-index to keep above other managed dropdowns
+      data.manageZ && data.el.css('z-index', defaultZIndex + 1);
+
       // Listen for tap outside events
       if (!designer) $doc.on('tap' + namespace, data.outside);
       if (data.hovering) data.el.on('mouseleave' + namespace, data.leave);
@@ -1042,6 +1070,12 @@
       data.delayId = window.setTimeout(data.complete, config.delay);
     }
 
+    function closeAll() {
+      $doc.find(namespace).each(function(i, el) {
+        $(el).triggerHandler(closeEvent);
+      });
+    }
+
     function closeOthers(data) {
       var self = data.el[0];
       $dropdowns.each(function(i, other) {
@@ -1070,6 +1104,9 @@
       return function() {
         data.list.removeClass(stateOpen);
         data.toggle.removeClass(stateOpen);
+
+        // Reset z-index for managed dropdowns
+        data.manageZ && data.el.css('z-index', '');
       };
     }
 
@@ -4343,5 +4380,6 @@
  */
 Webflow.require('ix').init([
   {"slug":"display-none-on-load","name":"Display None on Load","value":{"style":{"display":"none"},"triggers":[]}},
-  {"slug":"show-typeform","name":"Show Typeform","value":{"style":{},"triggers":[{"type":"click","selector":".formblock","stepsA":[{"display":"block","opacity":0.51,"height":"0px"},{"height":"auto","transition":"height 1000ms ease 0"}],"stepsB":[]}]}}
+  {"slug":"show-typeform","name":"Show Typeform","value":{"style":{},"triggers":[{"type":"click","selector":".formblock","stepsA":[{"display":"block","opacity":0.51,"height":"0px"},{"height":"auto","transition":"height 1000ms ease 0"}],"stepsB":[]}]}},
+  {"slug":"clickybutton","name":"Clickybutton","value":{"style":{"opacity":1,"x":"-10px","y":"-5px","z":"0px"},"triggers":[{"type":"click","loopA":true,"stepsA":[{"opacity":1,"transition":"transform 200 ease 0, opacity 200 ease 0","x":"0px","y":"0px","z":"0px"}],"stepsB":[]}]}}
 ]);
