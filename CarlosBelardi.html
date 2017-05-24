@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Droid+Sans" rel="stylesheet">
+
+</head>
+<title>
+  Carlos Belardi
+</title>
+<body>
+
+  <div class="container1">
+    <div>
+      <h1 id="name"> Carlos Belardi </h1>
+    </div>
+    <div id="stuff">
+      <ul style="padding: 0;">
+      <li> <a href="AboutMe.html"> About Me </li>
+      <li> <a href="PDFResume.pdf" target="_blank"> Resume </li>
+      <li> <a href="https://github.com/carlosbelardi"> Projects </li>
+    </ul>
+    </div>
+    <div id="background">
+      <img id="MyImage" class="stretch" alt=""/>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+<script type="text/javascript">
+var picArr = ['Paintwave_4.jpg', 'Paintwave_4A.jpg', 'Spiral_2B.jpg', 'Spiral_4B.jpg'];
+
+var myNumber = Math.floor(Math.random() * picArr.length);
+document.getElementById("MyImage").src = picArr[myNumber];
+</script>
+
+
+</html>

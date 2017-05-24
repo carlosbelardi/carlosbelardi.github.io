@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Droid+Sans" rel="stylesheet">
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<title>
+  About Me
+</title>
+<body>
+
+  <div class="container">
+    <div id="about">
+      <h3> About Me </h3>
+      <div class="row">
+        <div class="col-lg-2">
+        </div>
+        <div class="col-lg-4">
+          <p>
+            My name is Carlos Belardi and I'm a sophomore at Northwestern University. I'm majoring in computer science
+            and minoring in economics.
+            <br>  <br>My interests include </p>
+            <ul>
+              <li>Human-Computer Interaction</li>
+              <li>Artificial Intelligence</li>
+              <li>Game Design/Development
+            </ul>
+            <p>
+              When I'm not in the library doing homework, I like to spend my free time hanging out with friends,
+              going to downtown Chicago, reading, and playing video games.<br> <br>I think that seeing what kind of
+              music a person listens to can really help you get to know them, so I've compiled a little Spotify playlist of my
+              favorite songs at the moment.  <br> <br> If you want to get in touch, feel free to reach out to me at
+              <a href="mailto:carlosbelardi2019@u.northwestern.edu" target="_top">carlosbelardi2019@u.northwestern.edu</a> <br>
+          </p>
+          </p>
+        </div>
+
+        <div class="col-lg-1">
+        </div>
+
+        <div class="col-lg-4">
+          <iframe src="https://open.spotify.com/embed/user/1293960606/playlist/0g0FNzas7A2e5VfHbb39Tq" width="300" height="380" frameborder="0" allowtransparency="true"></iframe>
+        </div>
+        <div class="col-lg-1">
+        </div>
+      </div>
+    </div>
+    <div id="background">
+      <img id="MyImage" class="stretch" alt=""/>
+    </div>
+  </div>
+
+</body>
+<script type="text/javascript">
+var picArr = ['Paintwave_4.jpg', 'Paintwave_4A.jpg', 'Spiral_2B.jpg', 'Spiral_4B.jpg'];
+
+var myNumber = Math.floor(Math.random() * picArr.length);
+document.getElementById("MyImage").src = picArr[myNumber];
+</script>
+
+
+</html>
